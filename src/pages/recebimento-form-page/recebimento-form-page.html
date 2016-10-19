@@ -1,0 +1,61 @@
+<!--
+  Generated template for the RecebimentoFormPage page.
+
+  See http://ionicframework.com/docs/v2/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Cadastrar recebimento</ion-title>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content padding>
+  <!-- <form (ngSubmit)="cadastraRecebimento()">
+    <ion-item>
+      <ion-label>Date</ion-label>
+      <ion-datetime displayFormat="DD/MM/YYYY" [(ngModel)]="recebimento.data" name="data"></ion-datetime>
+    </ion-item>
+    <ion-item>
+      <ion-label>Descrição</ion-label>
+      <ion-textarea [(ngModel)]="recebimento.descricao" name="descricao"></ion-textarea>
+    </ion-item>
+    <button type="submit" block>Cadastrar</submit>
+  </form> -->
+  <form (ngSubmit)="cadastraRecebimento()">
+    <ion-item>
+      <ion-label>Valor</ion-label>
+      <ion-input type="number" [(ngModel)]="recebimento.valor" name="valor"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label>Descrição</ion-label>
+      <ion-textarea [(ngModel)]="recebimento.descricao" name="descricao"></ion-textarea>
+    </ion-item>
+    <ion-item>
+      <ion-label>Categoria</ion-label>
+      <ion-select [(ngModel)]="recebimento.categoria" name="categoria">
+        <ion-option value="Adiantamento">Adiantamento</ion-option>
+        <ion-option value="Boleto">Boleto</ion-option>
+        <ion-option value="Cartão">Cartão</ion-option>
+        <ion-option value="Comissão">Comissão</ion-option>
+        <ion-option value="Depósito">Depósito</ion-option>
+        <ion-option value="Empréstimo">Empréstimo</ion-option>
+        <ion-option value="Mensalidade">Mensalidade</ion-option>
+        <ion-option value="Rendimentos">Rendimentos</ion-option>
+        <ion-option value="Serviços">Serviços</ion-option>
+        <ion-option value="Transferência">Transferência</ion-option>
+        <ion-option value="Vendas">Vendas</ion-option>
+      </ion-select>
+    </ion-item>
+    <ion-item>
+      <ion-label>Date</ion-label>
+      <ion-datetime displayFormat="DD/MM/YYYY" [(ngModel)]="recebimento.data" name="data"></ion-datetime>
+    </ion-item>
+
+    <button ion-button color="default" type="submit" block>Cadastrar</button>
+  </form>
+</ion-content>
